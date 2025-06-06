@@ -3,8 +3,8 @@
 firstName = 'Randy' 
 lastName = 'Flores'
 
-a = b = c = 10
+a = b = c =  10
 
 print(a + b + c )
-str(print(a + b + c))
+
 print( firstName +" "+ lastName )
