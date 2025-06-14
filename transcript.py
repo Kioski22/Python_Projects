@@ -87,16 +87,19 @@ def run_transcription_pipeline(file_path, text_area):
         summary = summarize_text(transcript)
         text_area.insert(tk.END, "Summary generated.\n\n")
 
-        output = (
-            "================ TRANSCRIPT ================\n"
-            f"{transcript}\n\n"
-            "================ SPEAKER SEGMENTS ================\n"
-            + "\n".join(speakers) + "\n\n"
-            "================ SUMMARY ================\n"
-            + summary
-        )
+        global latest_output
+        latest_output = (
+            
+    "================ TRANSCRIPT ================\n"
+    f"{transcript}\n\n"
+    "================ SPEAKER SEGMENTS ================\n"
+    + "\n".join(speakers) + "\n\n"
+    "================ SUMMARY ================\n"
+    + summary
+)
 
-        text_area.insert(tk.END, output)
+        text_area.insert(tk.END, latest_output)
+
 
     except Exception as e:
         text_area.insert(tk.END, f"\n⚠️ Error: {e}")
