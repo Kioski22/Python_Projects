@@ -1,0 +1,116 @@
+Basic Data Types in Python
+Think of data types like categories for the kind of information your program handles. Just like you store clothes, food, or tools in different boxes, Python stores different information in different types.
+
+String: This is text, like words or sentences.
+
+Example: 'Hello', 'Testing 123'
+
+Integer: Whole numbers.
+
+Example: 1, 0, -5, 100
+
+Float: Numbers with decimal points.
+
+Example: 2.4, 5.2, 1000.00 
+--------------------------------------------------------------------------------------------------
+
+Flow Control – Deciding What the Program Does
+These symbols are used to compare values or make decisions in your program:
+
+Symbol	Meaning	Example
+==	Is equal to	a == b
+!=	Is not equal to	a != b
+<	Less than	a < b
+>	Greater than	a > b
+<=	Less than or equal to	a <= b
+>=	Greater than or equal to	a >= b
+Example
+if x > 0:
+    print("Positive")
+else:
+    print("Not positive")
+
+----------------------------------------------------------------------------------------------------------------
+Indentation – Organizing Code
+In Python, spaces matter! When writing code inside an if, else, or a function,
+you need to indent (usually 4 spaces) to show what belongs inside.
+
+if x > 0:
+    print("Positive")  # This is indented → part of the if block
+
+------------------------------------------------------------------------------------------------------------------
+
+Comments – Notes in Your Code
+Comments are notes you leave in your code that Python ignores. They’re just for humans reading the code.
+
+Single-line: Start with #
+
+# This is a Comment
+
+""" 
+this is 
+a 
+multi
+line 
+Comment
+  """"
+
+  Inline comment: On the same line as code
+  x = 1  # set x to 1
+
+
+----------------------------------------------------------------------------------------------------------
+
+Colon : – Start of a Block
+Whenever you're writing a block of code 
+("like inside an if, for, or function"), use a colon : at the end of the line.
+
+if x > 0:
+    print("Positive")
+----------------------------------------------------------------------------------------------------------
+
+Built-in Functions – Ready-to-Use Tools
+Python has some built-in tools (called functions) to help you do common things:
+
+*print() – Shows a message on the screen.
+
+    print("Hello")
+
+*input() – Asks the user to type something.
+    name = input("What's your name? ")
+    print("Hi " + name)
+
+
+*len() – Tells how many items/characters something has.
+
+    len("Hello")  # Returns 5
+
+*str() – Changes something into a string (text).
+    str(55)  # Becomes '55'
+
+*int() – Changes something into an integer (whole number).
+    int('75')  # Becomes 75
+
+*float() – Changes something into a decimal number.
+    float(10)  # Becomes 10.0
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+                            *Creating Your Own Function*
+A function is a reusable block of code — like a mini-program inside your program.
+
+To make one, use the keyword def, then name your function, and add a colon :.
+
+Example:
+
+    def say_hello():
+    print("Hello!")
+    say_hello()
+
+
+
+data types are not unchangeable  (data types are changeable through the process of typecasting(conversion))
+
+
+
