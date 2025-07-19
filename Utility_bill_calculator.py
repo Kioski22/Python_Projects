@@ -8,7 +8,7 @@ billAmount = int(input("input the bill amount"))
 if billType == "kwh" and billAmount >= 100:
     print("you've entered and electricity bill")
     billTotal = billAmount * 1 + 3
-    print("Hi! {name} your bill amount" + " " + str(billTotal))
+    print(f"Hi! {name} your bill amount" + " " + str(billTotal))
     try:
         billTotal = billAmount + 8 
         print("Hi! {name} your bill amount" + " " + str(billTotal))
