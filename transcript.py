@@ -5,7 +5,7 @@ import threading
 import os
 
 # Load Whisper model once
-model = whisper.load_model("small")
+model = whisper.load_model("medium")
 
 # Global variable to store selected file path
 selected_file = None
