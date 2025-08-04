@@ -1,0 +1,85 @@
+📖 Personal Library System (Console-Based)
+🔧 Objective:
+Create a program to manage a personal list of books, including adding, updating, removing, and listing books with their read status.
+
+🧠 Step-by-Step Guide (no code, just direction):
+✅ Step 1: Plan Your Data Structure
+Think about how to represent a book:
+A good choice is a dictionary with:
+
+Title
+
+Author
+
+Read status (e.g., "Read" or "Unread")
+
+Then store each book dictionary inside a list, which will be your library.
+
+⚙️ Step 2: Build Core Functions
+Create separate functions for each operation:
+
+Add a new book
+
+Ask the user for title and author.
+
+Default status: "Unread"
+
+Append the book to your library list.
+
+Display all books
+
+Loop through your list and print each book’s details clearly.
+
+Number them so it's easier for the user to reference later.
+
+Update read status
+
+Ask the user to choose a book (by number or title).
+
+Change the status to "Read" or "Unread".
+
+Remove a book
+
+Ask for a book to remove (again by number or title).
+
+Delete that item from your list.
+
+Search/filter
+
+Optional: filter by status (e.g., show only unread books)
+
+🔁 Step 3: Create a Menu Loop
+Build a loop that runs until the user chooses to exit.
+
+Display options like:
+
+markdown
+Copy
+Edit
+1. Add a book
+2. View all books
+3. Update book status
+4. Remove a book
+5. Exit
+Inside the loop, ask the user to choose an action and call the corresponding function.
+
+🧪 Step 4: Test Interactions
+Try adding several books.
+
+Update the status of a few.
+
+Remove one and see if the list updates correctly.
+
+Try edge cases: removing a book that doesn't exist, or entering invalid input.
+
+🌟 Optional Enhancements (for extra challenge):
+Save and load the library to/from a file (e.g., using JSON or text)
+
+Sort books alphabetically
+
+Add tags or genres
+
+Add a search function (by title or author)
+
+Allow bulk updates (e.g., mark all as read)
+
