@@ -16,7 +16,8 @@ def transcribe_audio(file_path, output_box, progress_bar, start_button):
         start_button.config(state="disabled")
 
         output_box.insert(tk.END, f"\nTranscribing: {file_path}\n\n")
-        result = model.transcribe(file_path)
+        result = model.transcribe(file_path, language="tl")
+        output_box.insert(tk.END, "Transcription completed!\n")
 
         output_box.insert(tk.END, result["text"] + "\n\n---\n")
     except Exception as e:
@@ -43,7 +44,7 @@ def start_transcription(output_box, progress_bar, start_button):
 
 def main_gui():
     root = tk.Tk()
-    root.title("Whisper Transcriber")
+    root.title("PSME TRANSCRIPT GEN. APP")
     root.geometry("750x550")
 
     # File Label
