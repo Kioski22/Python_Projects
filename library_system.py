@@ -24,55 +24,75 @@ def start_process():
             update_books(books)
         elif option == "4":
             delete_books(books)
-        elif option == "5":
+        else:
             break
     
 
 
 
 def add_book(books):
+    
     global book_number
     
+    
+    
     while True:
+        
         print("type'done' to stop")
+        
         title = input("what's the title: ")
-        title.lower()
-        author = input("who's the author: ")
-        author.lower()
-        rstatus = input("what's the read status : " )
-        rstatus.lower()
-        if title == 'done'or author == 'done' or rstatus ==  'done':
-            start_process(books)
-        book_number += 1
-        books.append({ {'book_number':str(book_number),'title': title, 'author': author, 'rstatus': rstatus}})
-        return books
+        title = title.lower()
+        if title == 'done':
+            return start_process()
+            
 
+
+        author = input("who's the author: ")
+        author = author.lower()
+        if author == 'done':
+            return start_process()
+           
+  
+        rstatus = input("what's the read status : " )
+        rstatus = rstatus.lower()
+        if rstatus == 'done':
+            return start_process()
+           
+        
+
+            
+        book_number += 1
+        books.append({'book_number':str(book_number),'title': title, 'author': author, 'rstatus': rstatus})
+    
+book_number = 0
 
 def view_books(books):
     print('These are the books')
     for items in books:
-        books1=( items['title'] , items['author'])
-        print(books1)
-    start_process()
+        books1=[ items['title'] , items['author'], items ['rstatus']] 
+        print(f"Title :{books1[0]},  Author : {books1[1]} ,  Read Status : {books1[2]}")
+    return start_process()
 
 
 def update_books(books):
     print('Which Book do you want to update')
     book2 =[] 
     for items in books:
-         book2.append((items['title'] , items['author']))
+         book2.append((items['title'] , items['author'] , items['rstatus']))
     print(book2)
 
     option = input('Your choice is ? Ex. Title ')
+    if option == 'done':
+        return start_process()
     option = option.lower()
 
     for items in books:
         if option in items['title']:
             items['title'] = input('what is the title? ')
             items['author'] = input("who's the author? ")
-            items['rstatus'] = input('Read / Unread')
+            items['rstatus'] = input('Read / Unread? ')
             return items['title'] , items['author'], items['rstatus']
-        
+    
     else: 
         print('invalid input')
         start_process()
@@ -86,17 +106,22 @@ def delete_books (books):
         print(books3)
 
 
-    option = input('What book do you want to delete ? Ex. "title"')
+    option = input('What book do you want to delete ? Ex. "title" ')
+    if option == 'done':
+        return start_process()
+    elif option == '5':
+        return
     option = option.lower()
 
     for book in books:
         if option in book['title']:
             books.remove(book)
-            break
+            break 
+        return start_process()
     
     else:
         print('book not found')
-        start_process()
+        return start_process()
 
 
 start_process()
