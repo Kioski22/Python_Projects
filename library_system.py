@@ -3,7 +3,7 @@ books = [
   
 ]
 
-print("CLI Based Library Management System \n")
+print("--------------------------CLI Based Library Management System------------------------------------------------- \n")
 def start_process():
     print(
         "What do you want to do? \n",
@@ -18,12 +18,16 @@ def start_process():
     while True:
         if option == "1":
             add_book(books)
+            break
         elif option == "2":
             view_books(books)
+            break
         elif option == "3":
             update_books(books)
+            break
         elif option == "4":
             delete_books(books)
+            break
         else:
             break
     
