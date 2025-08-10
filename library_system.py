@@ -1,3 +1,5 @@
+import json
+
 books = [
   
   
@@ -28,6 +30,11 @@ def start_process():
         elif option == "4":
             delete_books(books)
             break
+        elif option == "save":
+            with open ("books.json", "w")as a:
+                json.dump(books , a)
+                break
+
         else:
             break
     
