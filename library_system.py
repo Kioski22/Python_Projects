@@ -120,8 +120,9 @@ def delete_books (books):
     for book in books:
         if option in book['title']:
             books.remove(book)
-            break 
-        return start_process()
+            return start_process()
+            
+        
     
     else:
         print('book not found')
